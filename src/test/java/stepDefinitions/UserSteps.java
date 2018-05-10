@@ -1,15 +1,12 @@
 package stepDefinitions;
 
 import demoClasses.User;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class UserSteps {
 
@@ -31,6 +28,6 @@ public class UserSteps {
     public void certifiedYes(String name, String certification) throws Throwable {
         assertEquals(name, user.getName());
         assertEquals(user.getCertification(), "Java");
-        assertEquals(user.getResult(), true);
+        assertTrue(user.getResult());
     }
 }
