@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/vaultFeatureFiles"
-        // glue= {"stepDefinitions"}
+        features = "src/test/resources/vaultFeatureFiles",
+        glue = {"stepDefinitions"}
 )
 public class TestRunnerForVaultProject {
 }
