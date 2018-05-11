@@ -1,5 +1,6 @@
 package vaultProject.pageobjects;
 
+import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,7 +32,11 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(expandArrow));
     }
 
-    public void LogOutFromHomePage() {
+    public String GetCurrentURL() {
+        return this.driver.getCurrentUrl();
+    }
 
+    public void LogOutFromHomePage() {
+        // TODO: Complete this method when necessary
     }
 }

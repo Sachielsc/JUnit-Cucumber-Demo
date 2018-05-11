@@ -7,4 +7,4 @@ Feature: Vault User Log in
     When I type in "plan.6" as my user name
     And I also type in "plan01#" as my password
     And I click the Login Button
-    Then I should be able to see the Vault homepage
+    Then I should be able to see the Vault homepage, with a URL: "https://alphav3.vaultintel.com/dashboard/corrective/index"
