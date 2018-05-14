@@ -6,8 +6,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 import vaultProject.pageobjects.*;
+import com.aventstack.extentreports.Status;
+
 import static stepDefinitionsForVault.VaultStepSetUps.driver;
 import static stepDefinitionsForVault.VaultStepSetUps.loginPage;
+import static stepDefinitionsForVault.VaultStepSetUps.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -46,5 +49,6 @@ public class VaultSteps {
         System.out.print("\nConsole output:\n");
         System.out.print("Current driver has a URL of: " + driver.getCurrentUrl() + "\nCurrent page has a URL of: " + homePage.GetCurrentURL());
         System.out.print("\n");
+        test.log(Status.PASS, "Test passed.");
     }
 }
